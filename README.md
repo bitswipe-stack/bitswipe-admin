@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+# Bitswipe Admin Frontend
+
 # Lamassu ATM Process Improvement Documentation
 ------- 
 
@@ -210,4 +211,3 @@ You need to pass `DATABASE_URL` to it since both `lamassu-admin` and `lamassu-se
 use the same database.
 
 Both applications should be deployed and running.
->>>>>>> 1ffab3912533a38ef7df82f382b1b798e4418927
