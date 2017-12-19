@@ -1,0 +1,549 @@
+@import 'nib'
+@import './fonts'
+
+cream = #f6f6f4
+dark_gray = #2d2d2d
+light_gray = #5f5f5f
+tan_gray = #babaae
+cream_gray = #f5f5f2
+teal = #37e8d7
+teal_shadow = #31d0c1
+teal_film = #effffb
+teal_film_shadow = #e5f5f1
+
+body, html
+  height 100%
+  width 100%
+  overflow hidden
+
+body
+  position relative
+  font-family Brandon, helvetica, sans-serif
+  min-width 960px
+  min-height 500px
+  font-size 16px
+
+  .input_wrap, .select_wrap
+    width 100%
+    position relative
+    height 40px
+
+    input
+      appearance none
+      width calc(100% - 12px)
+      height calc(100% - 12px)
+      border 1px solid tan_gray
+      border-radius 5px
+      background none
+      padding 5px
+      margin 0
+      outline none
+
+    select
+      appearance none
+      width 100%
+      height 100%
+      background url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDI0cHgiIGhlaWdodD0iNTQ1cHgiIHZpZXdCb3g9IjAgMCA0MjQgNTQ1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MjQgNTQ1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiNCQ0JFQzAiIHBvaW50cz0iOC4yNDQsMjMzLjc2NCAyMTMuNjkyLDcuMzQ0IDQxOS4xNCwyMzMuNzY0ICIvPg0KPHBvbHlnb24gZmlsbD0iI0JDQkVDMCIgcG9pbnRzPSI0MTkuMTQsMzEyLjQ4NyAyMTMuNjkxLDUzOC45MDYgOC4yNDQsMzEyLjQ4NyAiLz4NCjwvc3ZnPg0K") no-repeat calc(100% - 6px) 50%
+      background-size 12px
+      border-radius 5px
+      border 0
+      padding 5px
+      border 1px solid tan_gray
+      outline none
+
+    input:focus, select:focus
+      border 1px solid teal
+
+
+  ul
+    list-style none
+    margin 0
+    padding 0
+
+  .panel
+    position absolute
+    left 0
+    top 0
+    bottom 0
+    width 205px
+    background dark_gray
+
+    .disbled
+      opacity 0.25
+      pointer-events none
+
+    .logo
+      position absolute
+      top 0
+      left 0
+      right 0
+      height 75px
+      background url('/images/lamassu-logo.png') 20px 50% no-repeat
+      z-index 4
+
+    .menu
+      display none
+      position absolute
+      top 75px
+      left 0
+      right 0
+      bottom 75px
+      z-index 2
+
+      ul
+        color rgba(255,255,255,1)
+        z-index 2
+        cursor pointer
+        list-style none
+        margin 0
+        padding 0
+
+        li
+          position relative
+          height 50px
+          width 100%
+          color light_gray
+          font-weight bold
+
+          .text
+            position absolute
+            padding-left 67px
+            padding-top 15px
+
+          .icon
+            position absolute
+            top 0px
+            left 24px
+            width 30px
+            height 50px
+            background-size 30px 30px
+            background-repeat no-repeat
+            background-position center center
+
+        li:hover
+          color teal
+          transition all 0.30s ease-in-out
+
+        li:first-child
+          border-top none
+
+        li.selected
+          color teal
+          transition all 0.30s ease-in-out
+          background rgba(0,0,0,0.1)
+
+    .display
+      display none
+      position absolute
+      bottom 0
+      height 75px
+      left 0
+      bottom 0
+      right 0
+      text-align center
+      z-index 4
+
+      background rgba(0,0,0,0.1)
+
+      .text
+        color white
+        font-size 10px
+        position absolute
+        height 12px
+        bottom 14px
+        left 0px
+        right 0
+        text-transform uppercase
+        letter-spacing 3px
+        margin-right -3px
+
+      .price
+        color white
+        position absolute
+        font-size 24px
+        right 0px
+        left 0
+        top 10px
+        //font-family Raleway
+        color teal
+        letter-spacing 3px
+        margin-right -3px
+
+
+        .currency
+          position relative
+          font-size 17px
+          left 0
+          font-weight bold
+      .subtext
+        color teal
+        font-size 10px
+        position absolute
+        height 12px
+        bottom 34px
+        left 0px
+        right 0
+        text-transform uppercase
+        display none
+
+        .currency
+          position relative
+          top -1px
+          font-size 8px
+          left -2px
+
+  .dash
+    position absolute
+    right 0
+    top 0
+    bottom 0
+    left 205px
+    background cream_gray
+    z-index 20
+
+    .login
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+
+      .box
+        width 320px
+        height 350px
+        position absolute
+        left 50%
+        margin-left -160px
+        top 50%
+        margin-top -220px
+
+        .logo
+          position absolute
+          top 0
+          left 0
+          right 0
+          height 100px
+          background url('/images/lamassu-logo.png') center center no-repeat
+
+        .notify
+          position absolute
+          bottom 0
+          left 0
+          right 0
+          height 53px
+
+        .form
+          position absolute
+          top 100px
+          left 0
+          right 0
+          bottom 50px
+          background #f3f3f3
+          box-shadow 0px 1px 1px rgba(0,0,0,0.2)
+
+          input
+            color tan_gray
+            text-align center
+
+          .inner
+            background white
+            position absolute
+            top 0px
+            left 0px
+            right 0px
+            bottom 3px
+
+          .message
+            position absolute
+            top 20px
+            left 0
+            right 0
+            color light_gray
+            font-size 24px
+            text-align center
+            //font-weight bold
+
+          .email
+            position absolute
+            bottom 80px
+            left 20px
+            right 20px
+            height 40px
+
+          .password
+            position absolute
+            bottom 20px
+            left 20px
+            right 20px
+            height 40px
+
+    .main
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+
+      .links
+        height 15px
+        position absolute
+        right 53px
+        top 28px
+        left 0
+        text-align right
+        font-size 14px
+        color tan_gray
+
+        li
+          float right
+          margin-left 25px
+          cursor pointer
+
+      .main_wrap
+        position absolute
+        top 75px
+        left 50px
+        bottom 50px
+        right 50px
+
+        .card
+          position absolute
+          top 0px
+          bottom 0px
+          left 0px
+          right 0px
+          background #f3f3f3
+          box-shadow 0px 1px 1px rgba(0,0,0,0.2)
+          font-style normal
+          border-radius 5px
+          overflow hidden
+
+          .inner
+            background white
+            position absolute
+            top 0
+            bottom 2px
+            right 0
+            left 0
+            border-radius 3px
+
+            .top
+              position absolute
+              top 0px
+              left 0px
+              right 0
+              height 75px
+              border-bottom 1px solid rgba(0,0,0,0.1)
+              pointer-events none
+
+              .main_title
+                position absolute
+                font-size 20px
+                left 25px
+                top 25px
+                color black
+
+            .mid
+              position absolute
+              top 76px
+              left 0
+              right 0
+              bottom 11px
+              padding 25px
+
+              .description
+                float left
+                width 30%
+
+                .description_title
+                  height 20px
+                  font-weight bold
+
+                .description_body
+                  padding-top 20px
+
+              .disabled
+                opacity 0.3
+                pointer-events none
+
+              .settings
+                float right
+                overflow hidden
+                width calc(70% - 11px)
+                padding-left 10px
+                padding-top 40px
+
+                ul
+                  li
+                    width 100%
+                    margin-bottom 10px
+                    height 40px
+                    position relative
+
+                    .label
+                      position absolute
+                      left 0
+                      top 0
+                      bottom 0
+                      width 140px
+                      padding-top 10px
+                      font-size 20px
+                      text-align right
+                      color tan_gray
+
+                    .input_wrap, .select_wrap
+                      position absolute
+                      right 0
+                      top 0
+                      bottom 0
+                      width calc(100% - 150px)
+                      padding-top 5px
+                      text-align right
+
+
+                .limits //compliance
+
+                  ul
+                    li
+                      width 100%
+                      margin-bottom 10px
+                      height 40px
+                      position relative
+
+                      .label
+                        width 180px
+
+                      .limit
+                        position absolute
+                        left 190px
+                        top 0
+                        bottom 0
+                        width calc(20% - 10px)
+
+                        input
+                          text-align right
+
+                        .currency
+                          position absolute
+                          top 14px
+                          left 6px
+
+
+                      .verify_type
+                        position absolute
+                        right 0
+                        top 0
+                        bottom 0
+                        width calc(80% - 190px)
+
+            .bot
+              position absolute
+              bottom 0
+              left 0
+              right 0
+              height 10px
+              border-top 1px solid rgba(0,0,0,0.1)
+
+      .main_trading
+        .inner
+          .mid
+            .toggle
+              width 100%
+              height 50px
+              background cream_gray
+              border-radius 5px
+              position relative
+              margin-top 50px
+              cursor pointer
+              font-weight bold
+              text-align center
+
+              .active
+                display none
+                position absolute
+                top 0
+                left 0
+                right 0
+                bottom 0
+                border-radius 5px
+                color green
+                padding-top 14px
+
+              .inactive
+                display none
+                position absolute
+                top 0
+                left 0
+                right 0
+                bottom 0
+                border-radius 5px
+                color red
+                padding-top 14px
+
+      .main_price
+        .current_price //price
+          height 30px
+          width calc(100% - 150px)
+          margin-left 150px
+          padding-top 0px
+          text-align center
+          color tan_gray
+          .currency
+            font-size 12px
+            font-weight bold
+
+        .percent_symbol
+          position absolute
+          top 15px
+          right 7px
+          color tan_gray
+
+        .card
+          .inner
+            .mid
+              bottom 126px
+
+            .bot
+              height 125px
+
+              .price_overview
+                position absolute
+                top 25px
+                right 25px
+                bottom 25px
+                left 25px
+                border 2px dashed tan_gray
+                text-align center
+                font-size 20px
+                padding-top 20px
+
+                .value
+                  font-weight normal
+                  .currency
+                    font-size 14px
+                    font-weight bold
+
+.scrollbar-measure
+  width 100px
+  height 100px
+  overflow scroll
+  position absolute
+  top -9999px
+
+.scroller
+  overflow-y scroll
+
+
+      .main_pairing
+        #qr-code img
+          margin: 0 auto;
+
+
+.successful-save
+  background-color teal !important
+
+.failed-save
+  border-color red !important
+
+#authentication-paused
+  font-size 16px

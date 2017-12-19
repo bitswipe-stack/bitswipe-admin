@@ -1,0 +1,53 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    != SocketStream
+    title Lamassu Admin Panel
+  body
+    .panel
+      .logo
+
+      .menu.scroller
+
+        ul.items
+          li 
+            .text Dashboard
+            .icon(style="background-image:url('/images/icon_dashboard.svg')")
+          li
+            .text Notifications
+            .icon(style="background-image:url('/images/icon_notification.svg')")
+          li 
+            .text Price
+            .icon(style="background-image:url('/images/icon_commissions.svg')")
+          li 
+            .text Wallet
+            .icon(style="background-image:url('/images/icon_notification.svg')")
+          li
+            .text Trading
+            .icon(style="background-image:url('/images/icon_exchanges.svg')")
+          li
+            .text Compliance
+            .icon(style="background-image:url('/images/icon_language.svg')")
+          li
+            .text Pairing
+            .icon(style="background-image:url('/images/icon_language.svg')")
+          li 
+            .text Limits
+            .icon(style="background-image:url('/images/icon_limits.svg')")
+          li 
+            .text Languages
+            .icon(style="background-image:url('/images/icon_language.svg')")
+          li
+            .text System
+            .icon(style="background-image:url('/images/icon_shutdown.svg')")
+
+
+      .display
+
+        .price
+          span.number ---.--
+        .text Display Price
+        .subtext ( ---.-- + 3.00% )
+
+    .dash

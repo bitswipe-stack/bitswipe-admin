@@ -1,0 +1,54 @@
+{
+  "name": "bitswipe-admin",
+  "description": "Lamassu admin server. First part of Lamassu stack you need to install.",
+  "version": "0.5.14",
+  "author": "Seth Bergman",
+  "contributors": "Lamassu",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "async": "~0.2.10",
+    "ip": "^0.3.0",
+    "lamassu-bitcoinaverage": "~0.2.0",
+    "lamassu-bitgo": "^0.1.7",
+    "lamassu-bitpay": "~0.3.0",
+    "lamassu-bitstamp": "~0.2.0",
+    "lamassu-coinapult": "^0.4.5",
+    "lamassu-coindesk": "~0.2.0",
+    "lamassu-config": "~0.4.0",
+    "lamassu-kraken": "^1.1.1",
+    "lodash": "~2.4.1",
+    "request": "^2.34.0",
+    "socketstream": "0.3.10",
+    "ss-hogan": "0.1.x",
+    "ss-jade": "0.1.x",
+    "ss-stylus": "0.1.x",
+    "yargs": "^1.2.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --recursive test"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  },
+  "license": "unlicense",
+  "bin": {
+    "lamassu-admin": "./app.js"
+  },
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitswipe-stack/lamassu-admin.git"
+  },
+  "keywords": [
+    "bitcoin"
+  ],
+  "bugs": {
+    "url": "https://github.com/bitswipe-stack/lamassu-admin/issues"
+  }
+}

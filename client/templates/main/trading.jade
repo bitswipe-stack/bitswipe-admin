@@ -1,0 +1,45 @@
+
+.card
+
+  .inner
+
+    .top
+      .main_title Trading
+
+
+    .mid.scroller
+      .description
+        .description_title Set your trade settings. 
+        .description_body
+          .p Set or change your current credentials.
+          .p &#8199;
+          .p For additional exchange options, see our 
+            a(href='http://support.lamassu.is/support/solutions/folders/1000211907', style='text-decoration: none') support section
+            .
+        .toggle
+          .active Active
+          .inactive Inactive
+      .settings
+        ul
+          li
+            .label Provider
+            .select_wrap
+              select#exchange_provider
+                option(value="bitstamp") BitStamp
+                option(value="coinapult") Coinapult
+                option(value="kraken") Kraken
+          li
+            .label ID
+            .input_wrap
+              input#exchange_id
+          li
+            .label API Key
+            .input_wrap
+              input#exchange_api_key
+          li
+            .label Secret
+            .input_wrap
+              input(type="password")#exchange_secret
+
+    .bot
+

@@ -1,0 +1,41 @@
+
+
+.card
+
+  .inner
+
+    .top
+      .main_title Wallet
+
+    .mid.scroller
+      .description
+        .description_title Set your wallet settings
+        .description_body
+          .p Here you can change your current wallet settings. Please fill out all form fields.
+          .p &#8199;
+          .p For additional wallet options, see our 
+            a(href='http://support.lamassu.is/support/solutions/folders/1000211906', style='text-decoration: none') support section
+            .
+      .settings
+        ul
+          li
+            .label Provider
+            .select_wrap
+              select#wallet_provider
+                option(value="bitgo") BitGo
+          li
+            .label Token
+            .input_wrap
+              input#wallet_token
+          li
+            .label Wallet ID
+            .input_wrap
+              input#wallet_wallet_id
+          li
+            .label Passphrase
+            .input_wrap
+              input(type="password")#wallet_wallet_passphrase
+
+    .bot
+
+

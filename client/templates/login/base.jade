@@ -1,0 +1,19 @@
+.box
+  .logo
+  .notify
+  .form
+    .inner
+      #log-in.message
+        | Log into your machine.
+      #logging-in.message(style="display: none")
+        | Logging you in...
+      #authentication-failed.message(style="display: none")
+        | Authentication failed
+      #authentication-paused.message(style="display: none")
+        | Too many login attempts. Wait 1 minute or contact Lamassu support.
+      .email
+        .input_wrap
+          input(type="text", value="username", autocorrect="on", autocapitalize="off")#login_username
+      .password
+        .input_wrap
+          input(value="password", autocorrect="on", autocapitalize="off")#login_password
